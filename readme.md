@@ -1,22 +1,53 @@
 ARKADASSSSLARRR MERHABALAR
-PROJEYI CALISTIRMAK ICIN PYTHONU BILGISAYARIMIZA KURUYORUZ KURULUMDA ADD PATH DEMENIZ LAZIM
-KONTROL ICIN CMD YAZIN python -V KOMUTU ILE BERABER VERISYON GORUCEZ VERSIYON CIKIYORSA TAMAMIZ
-PROJEYI GIT PULL ILE CEKIYORUZ SONRASINDA ISE 
-PROJE KLASORUNE GIRIYORUZ PATH SCHEDULEX OLACAK AMA EN DIS PATHDAKI SCHEDULEX OLACAK YANI SOYLE BIR SEY GORMEYIN 
-Belgeler\projects\schedulex\schedulex `---> TEK SCHEDULEX GORECEKSINIZ
-BU PATHTA YAPMAMIZ GEREKEN python -m venv venv ILE SANAL MAKINAMIZI KURACAGIZ
-ARDINDAN AYNI PATH UZERINDEN VSCODE TERMINALINDE venv\scripts\activate YAZARAK SANAL MAKINAYI KURACAGIZ BUNU POWERSHELL DEGIL 
-COMMEND LINE UZERINDEN YAPMANIZI TAVSIYE EDERIM POWERSHELL IZINLERI BAZILARINDA ACIK OLMUYOR MACERA YASAMAYALIM
-satir basinda (venv) GORMENIZ LAZIM CMD UZERINDE SONRA ISE TAMAMIZ 
-PIP FREZE ILE VENV ICERISINDEKI YUKLU PAKETLERI KONTROL EDEBILIRSINIZ 
-pip install django YAZIYORUZ TERMINALE !!!!! VENV ACIK OLMASINA DIKKAT PCYE KURARSINIZ YOKSA (bisi olmaz ama gerek yok tek pakette gitsin) 
-SUANLIK BASKA DEPENDICIES KURMANIZA GEREK YOK ARD ARDA ASSAGIDAKI KODLARI YAZIN
-cd schedulex 
+
+Projeyi çalıştırmak için Python'u bilgisayarımıza kuruyoruz. Kurulumda **Add PATH** demeniz lazım.
+
+Kontrol için CMD yazın: `python -V` komutu ile beraber versiyon göreceğiz. Versiyon çıkıyorsa tamamız.
+
+Projeyi `git pull` ile çekiyoruz. Sonrasında ise proje klasörüne giriyoruz.
+
+Path `schedulex` olacak ama en dış path'taki `schedulex` olacak. Yani şöyle bir şey görmeyin:
+Belgeler\projects\schedulex\schedulex
+Tek `schedulex` göreceksiniz bu path’te.
+
+Yapmamız gereken `python -m venv venv` ile sanal makinamızı kuracağız. Ardından aynı path üzerinden VSCode terminalinde `venv\scripts\activate` yazarak sanal makinayı kuracağız.
+
+Bunu PowerShell değil, Command Line üzerinden yapmanızı tavsiye ederim. PowerShell izinleri bazılarında açık olmuyor. Macera yaşamayalım.
+
+Satır başında `(venv)` görmeniz lazım CMD üzerinde.
+
+Sonra ise tamamız. `pip freeze` ile venv içerisindeki yüklü paketleri kontrol edebilirsiniz.
+
+`pip install django` yazıyoruz terminale.
+Venv açık olmasına dikkat!
+PC’ye kurarsınız yoksa. (Bir şey olmaz ama gerek yok, tek pakette gitsin.)
+
+Şu anlık başka dependencies kurmanıza gerek yok.
+
+Ard arda aşağıdaki adımları izleyin:
+
+cd schedulex
 python manage.py makemigrations
 python manage.py migrate
-python manage.py runserver !!!! TEBRIKLER SUNUCUNUZ AYAGA KALKTI TERMINAL UZERINDEN CIKAN LINKE CTRL+SOLCLICK YAPARSANIZ ACILIR
-ama suanda frontend entegre degil bu yuzden calismalarinizi halihazirdaki url http://127.0.0.1:8000/ BOYLE BIR SEY OLACAK
-http://127.0.0.1:8000/admin YAZAR ISENIZ DJANGONUN ADMIN PANELINE ERISEBILIRSINIZ BURADA ISTEYEN SIFRE VE KULLANICI ADINI ISE 
-python manage.py createsuperuser KODU ILE TANIMLAYABILIR VE SISTEM UZERINDEKI MODELLERINIZI VE DATALARINI GORUNTULEYEBILIR
-APPSLER ICINDEKI ADMIN.PY DOSYASINDAN BU SAYFADA GORMEK ISTEDIKLERINIZI OZELLESTIREBILIRSINIZ 
-- smartEDU Gorkem
+python manage.py runserver
+
+Tebrikler 🎉
+Sunucunuz ayağa kalktı. Terminal üzerinden çıkan linke CTRL + sol click yaparsanız açılır.
+
+Ama şu anda frontend entegre değil. Bu yüzden çalışmalarınızı halihazırdaki URL üzerinden yapabilirsiniz:
+[http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+
+Böyle bir şey olacak:
+[http://127.0.0.1:8000/admin](http://127.0.0.1:8000/admin)
+
+Yazarsanız Django’nun admin paneline erişebilirsiniz.
+
+Burada isteyen şifre ve kullanıcı adını ise:
+`python manage.py createsuperuser` kodu ile tanımlayabilir
+ve sistem üzerindeki modellerinizi ve datalarınızı görüntüleyebilir.
+
+Apps’ler içindeki `admin.py` dosyasından bu sayfada görmek istediklerinizi özelleştirebilirsiniz.
+
+!! GIT PUSH YAPARKEN VENV VE NODEMODULES DOSYALARI GELMEYECEK SQLITE DB DE GELMEYECEK BUNLARI KENDI LOCALINIZDE YAPCAKSINIZ
+!! ZTN VENV DOSYASINI VE SQLITE SOYLEDIM NODEMODULESI HALLEDICEGIZ
+!! SIZE BOS DB GELCEK SUANLIK ADMIN SAYFASI UZERINDEN MODELINIZE YENI KISILER TANIMLAYABILIRSINIZ 
