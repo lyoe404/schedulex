@@ -2,7 +2,7 @@ ARKADASSSSLARRR MERHABALAR
 
 Projeyi çalıştırmak için Python'u bilgisayarımıza kuruyoruz. Kurulumda **Add PATH** demeniz lazım.
 
-Kontrol için CMD yazın: `python -V` komutu ile beraber versiyon göreceğiz. Versiyon çıkıyorsa tamamız.
+Kontrol için CMD yazın: `python -V` komutu ile beraber VERSIYONU GORECEZ. Versiyon çıkıyorsa tamamız.
 
 Projeyi `git pull` ile çekiyoruz. Sonrasında ise proje klasörüne giriyoruz.
 
@@ -31,7 +31,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
-Tebrikler 🎉
+BRAVOOOOO
 Sunucunuz ayağa kalktı. Terminal üzerinden çıkan linke CTRL + sol click yaparsanız açılır.
 
 Ama şu anda frontend entegre değil. Bu yüzden çalışmalarınızı halihazırdaki URL üzerinden yapabilirsiniz:
